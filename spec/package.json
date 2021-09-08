@@ -8,7 +8,7 @@
   "scripts": {
     "build:petstore": "redoc-cli bundle test/petstore/openapi.v1.yaml -o dist/petstore/index.html",
     "build:todos": "redoc-cli bundle test/todos/openapi.v1.json -o dist/todos/index.html",
-    "build": "npm buld:petstore && npm build:todos",
+    "build": "npm run buld:petstore && npm run build:todos",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
