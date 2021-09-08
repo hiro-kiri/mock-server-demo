@@ -6,8 +6,8 @@
     "test": "test"
   },
   "scripts": {
-    "build:petstore": "redoc-cli bundle test/petstore/openapi.v1.yaml -o api/petstore.html",
-    "build:todos": "redoc-cli bundle test/todos/openapi.v1.json -o api/todos.html",
+    "build:petstore": "redoc-cli bundle test/petstore/openapi.v1.yaml -o dist/petstore.html",
+    "build:todos": "redoc-cli bundle test/todos/openapi.v1.json -o dist/todos.html",
     "build": "npm run build:petstore && npm run build:todos",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -3,4 +3,4 @@
 node_modules
 .venv
 spec/index.html
-spec/api/*
+spec/dist/*
