@@ -21,4 +21,5 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: # S3のbucket-for-deploying-react-projectバケットにデプロイ
-          aws s3 cp --recursive --region ap-northeast-1 spec/dist s3://csp-api-spec.com
+          aws s3 cp --recursive --region ap-northeast-1 spec/dist/petstore s3://csp-api-spec.com/petstore
+          aws s3 cp --recursive --region ap-northeast-1 spec/dist/todos s3://csp-api-spec.com/todos
