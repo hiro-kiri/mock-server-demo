@@ -1,0 +1,19 @@
+{
+  "name": "csp-api-spec",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build:petstore": "redoc-cli bundle test/petstore/openapi.v1.yaml -o dist/petstore/index.html",
+    "build:todos": "redoc-cli bundle test/todos/openapi.v1.json -o dist/todos/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "redoc-cli": "^0.12.3"
+  }
+}
