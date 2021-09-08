@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  spec-todos:
+    # image: "redocly/redoc"
+    build:
+      context: ./spec
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+#      - ./spec:/usr/share/nginx/html/spec
+      - vol-log-spec-todos:/var/log
+    environment:
+      SPEC_URL: ./spec/test/todos/openapi.v1.json
+
+  app:
+    build: 
+      context: ./app
+      dockerfile: Dockerfile
+      target: uvicorn
+    ports:
+      - "82:80" 
+    volumes: 
+      - vol-log-app:/var/log
+      
+volumes:
+  vol-log-spec-todos: {}
+  vol-log-app: {}
